@@ -1,8 +1,13 @@
-const AppConfig = {
+const appConfig = {
+   auth: {
+      keys: {
+         token: "Template",
+      },
+   },
    app: {
       name: "Template"
    },
  };
 
- export default AppConfig;
+ export default appConfig;
  

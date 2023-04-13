@@ -4,6 +4,7 @@ import { SnackbarProvider } from "notistack";
 
 import RouterProvider from '@components/Routes';
 import ThemeProvider from '@theme/index.js';
+import { AuthProvider } from '@hooks/AuthContext';
 
 interface Props {
    children?: React.ReactNode;
@@ -14,7 +15,9 @@ const App: React.FC<Props> = ({ children, ...props }) => {
       <ThemeProvider>
          <SnackbarProvider>
             <CssBaseline />
-            <RouterProvider/>
+            <AuthProvider>
+               <RouterProvider/>
+            </AuthProvider>
          </SnackbarProvider>
       </ThemeProvider>
    )
