@@ -19,10 +19,13 @@
     "paths": {
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
+      "@config/*": ["./config/*"],
+      "@context/*": ["./context/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@modules/*": ["./modules/*"],
       "@pages/*": ["./pages/*"],
       "@utils/*": ["./utils/*"],
-      "@config/*": ["./config/*"],
-      "@theme/*": ["./theme/*"]
+      "@theme/*": ["./theme/*"],
     },
     "typeRoots": ["node_modules/@types", "./types"]
   },

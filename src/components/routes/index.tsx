@@ -1,15 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from '@pages/home';
-import About from '@pages/about';
+import Home from '@pages/Home';
+import About from '@pages/About';
+import ROUTES from '@config/routes';
+import PrivateRoute from '@components/Routes/PrivateRoute';
 
 const RouterProvider: React.FC = () => {
   return (
    <Router>
       <Routes>
-         <Route path="/" element={<Home />} />
-         <Route path="/about" element={<About />} />
+         <Route path={ROUTES.HOME} element={<Home />} />
+         <PrivateRoute path={ROUTES.ABOUT} element={<About />} />
       </Routes>
   </Router>
   );
