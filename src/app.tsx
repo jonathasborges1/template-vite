@@ -3,8 +3,9 @@ import { CssBaseline } from "@mui/material";
 import { SnackbarProvider } from "notistack";
 
 import RouterProvider from '@components/Routes';
-import ThemeProvider from '@theme/index.js';
 import { AuthProvider } from '@hooks/AuthContext';
+
+import ThemeProvider from '@components/Theme/themeProvider';
 
 interface Props {
    children?: React.ReactNode;
