@@ -2,7 +2,6 @@ import { createBreakpoints } from "@mui/system";
 import { createTheme } from "@mui/material/styles";
 import shadows from "@mui/material/styles/shadows";
 import createPalette from "@mui/material/styles/createPalette.js";
-
 import * as typography from "./typography.js"
 
 declare module "@mui/material/styles" {
@@ -81,6 +80,7 @@ const theme = createTheme({ palette, breakpoints });
 
 const AtemTheme = createTheme({
     ...theme,
+    
     typography: {
     ...typography.options,
     ...typography.overrides(theme)

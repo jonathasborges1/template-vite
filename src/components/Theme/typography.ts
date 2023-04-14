@@ -1,34 +1,69 @@
 import { Theme, TypographyVariantsOptions } from "@mui/material/styles";
 
+/*
+As seguintes fontes requerem que você as importe: (as demais funcionam sem precisar importar)
+
+  `montserrat`,
+  `Open Sans`,
+  `Oswald`,
+  `Poppins`,
+  `"Roboto"`,
+  `"Segoe UI"`,
+  `Source Sans Pro`,
+
+  `Tahoma`,
+  `Palatino`,
+  `"Oxygen"`,
+  `"Ubuntu"`,
+  `"Cantarell"`,
+  `"Fira Sans"`,
+  `"Droid Sans"`,
+  `sans-serif`,
+  `"Helvetica Neue"`,
+  `"BlinkMacSystemFont"`,
+  `-apple-system`,
+  `Avant Garde`,
+  `Century Gothic`,
+  `Helvetica`,
+  `Lucida Grande`,
+  `Myriad Pro`,
+  `lato`,
+  `Roboto`,
+  
+*/
 export const options: TypographyVariantsOptions = {
   fontFamily: [
-    `-apple-system`,
-    `"BlinkMacSystemFont"`,
-    `"Segoe UI"`,
-    `"Roboto"`,
-    `"Oxygen"`,
-    `"Ubuntu"`,
-    `"Cantarell"`,
-    `"Fira Sans"`,
-    `"Droid Sans"`,
-    `"Helvetica Neue"`,
-    `sans-serif`,
+    `Comic Sans MS`,
+    `Arial`,
+    `Candara`,
+    `Calibri`,
+    `Consolas`,
+    `Courier`,
+    `Courier New`,
+    `Georgia`,
+    `Impact`,
+    `Lucida Sans Unicode`,
+    `Segoe UI`,
+    `Times`,
+    `Times New Roman`,
+    `Trebuchet MS`,
+    `Verdana`,
   ].join(","),
 };
 
 export const overrides = (theme: Theme): TypographyVariantsOptions => (
   {
-    h1: { fontSize: "8em" },
-    h2: { fontSize: "1.5em" },
-    h3: { fontSize: "1.3em" },
-    h4: { fontSize: "1em" },
-    h5: { fontSize: "0.8em" },
-    h6: { fontSize: "0.7em" },
+    h1: { fontSize: "2.4rem", fontWeight:700, },
+    h2: { fontSize: "2rem", fontWeight:600 },
+    h3: { fontSize: "1.5rem", fontWeight:500 },
+
+    body1: {fontSize: "1rem", fontWeight:400},
+    caption: {fontSize: "0.8rem", fontWeight:300},
     button: { textTransform: "none" },
  
     sectionTitle: {
      color: theme.palette.titles.main,
-     fontSize: "5.5em !important", 
+     fontSize: "2.5em !important", 
      fontFamily: "Poppins",
      fontWeight: 700,
      display: "block",
