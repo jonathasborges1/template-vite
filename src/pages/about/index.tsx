@@ -1,3 +1,5 @@
+import Layout from '@components/Layout';
+import { Grid, Typography } from '@mui/material';
 import React from 'react';
 
 interface Props {
@@ -6,10 +8,12 @@ interface Props {
 
 const About: React.FC<Props> = ({ children, ...props }) => {
    return (
-      <>
-         <h1>About Page</h1>
+      <Layout>
+         <Grid container>
+            <Typography variant='h1'>About Page</Typography>
+         </Grid>
          {children}
-      </>
+      </Layout>
    )
 }
 

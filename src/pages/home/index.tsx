@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSnackbar } from 'notistack';
+
 import { Grid, Typography } from '@mui/material';
+import Layout from '@components/Layout';
 
 const Home: React.FC = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -14,12 +16,15 @@ const Home: React.FC = () => {
   }
   
   return (
+    <Layout>
       <Grid container>
         <Typography variant='h1'>Home Page</Typography>
          
          <button onClick={handleClick}>Show Snackbar</button>
          <br />
       </Grid>
+    </Layout>
+      
   );
 };
 

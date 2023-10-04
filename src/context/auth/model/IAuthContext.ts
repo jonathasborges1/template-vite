@@ -42,3 +42,6 @@ export interface AuthenticationContextData {
    username: string;
  }
  
+ export interface IAuth {
+  isAuthenticated?: boolean;
+ }

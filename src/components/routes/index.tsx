@@ -10,11 +10,12 @@ import Home from '@pages/Home';
 import About from '@pages/About';
 
 const RouterProvider: React.FC = () => {
+
   return (
    <Router>
       <Routes>
          {/* Template Public Routes */}
-         <Route path={ROUTES.HOME} element={<Home />} />
+         <Route index path={ROUTES.HOME} element={<Home />} />
          <Route path={ROUTES.LOGIN} element={<Login/>} />
          <Route path={ROUTES.TYPOGRAPHY} element={<TypographyPage/>} />
 
@@ -25,4 +26,4 @@ const RouterProvider: React.FC = () => {
   );
 };
 
-export {  RouterProvider };
+export { RouterProvider };

@@ -51,15 +51,30 @@ export const options: TypographyVariantsOptions = {
   ].join(","),
 };
 
+const defaulColor = "#fff";
+
 export const overrides = (theme: Theme): TypographyVariantsOptions => (
   {
-    h1: { fontSize: "2.4rem", fontWeight:700, },
-    h2: { fontSize: "2rem", fontWeight:600 },
-    h3: { fontSize: "1.5rem", fontWeight:500 },
+    h1: { 
+      // fontSize: "3rem", 
+      [theme.breakpoints.up("small")]: { fontSize: "1rem" },
+      [theme.breakpoints.up("mobile")]: { fontSize: "1.4rem" },
+      [theme.breakpoints.up("tablet")]: { fontSize: "1.8rem" },
+      [theme.breakpoints.up("desktop")]: { fontSize: "2.4rem" },
+      [theme.breakpoints.up("fullhd")]: { fontSize: "3rem" },
+      fontWeight:700, color: defaulColor 
+    },
 
-    body1: {fontSize: "1rem", fontWeight:400},
-    caption: {fontSize: "0.8rem", fontWeight:300},
-    button: { textTransform: "none" },
+    h2: { 
+      fontSize: "2rem", 
+      fontWeight:600, 
+      color: defaulColor 
+    },
+    h3: { fontSize: "1.5rem", fontWeight:500, color: defaulColor },
+
+    body1: {fontSize: "1rem", fontWeight:400, color: defaulColor},
+    caption: {fontSize: "0.8rem", fontWeight:300, color: defaulColor},
+    button: { textTransform: "none", color: defaulColor },
  
     sectionTitle: {
      color: theme.palette.titles.main,

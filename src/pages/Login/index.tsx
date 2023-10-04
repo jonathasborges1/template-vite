@@ -1,15 +1,20 @@
 import React from 'react';
 
+import { Grid, Typography } from '@mui/material';
+import Layout from '@components/Layout';
+
 interface Props {
    children?: React.ReactNode;
 }
 
-const Login: React.FC<Props> = ({ children, ...props }) => {
+const Login: React.FC<Props> = ({ children }) => {
    return (
-      <> 
-         <h1>Login Page</h1>
+      <Layout> 
+         <Grid container>
+            <Typography variant='h1'>Login Page</Typography>
+         </Grid>
          {children}
-      </>
+      </Layout>
    )
 }
 

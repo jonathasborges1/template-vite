@@ -1,20 +1,25 @@
 import React from "react";
-import { Navigate, PathRouteProps } from "react-router-dom";
+import { Navigate, PathRouteProps, Outlet } from "react-router-dom";
 
-import { useAuth } from "@hooks/AuthContext";
+import { useAuth } from "@context/auth/AuthContext";
 import { ROUTES } from "@config/routes";
+
+import useDialogAlert from "@hooks/useDialogAlert";
 
 interface PrivateRouteProps extends PathRouteProps {}
 
- const PrivateRoute: React.FC<PrivateRouteProps> = ({ Component }) => {
-   const authContext = useAuth();
+ const PrivateRoute: React.FC<PrivateRouteProps> = ({}) => {
 
-   if (authContext.token && Component) {
-      return <Component/>
+   const { snackbar } = useDialogAlert();
+
+   const { currentAuthState } = useAuth();
+
+   if (!currentAuthState.isAuthenticated) {
+      snackbar({message:'Voce nao possui permissao para acessar essa pagina', variant: 'warning'});
+      return <Navigate to={ROUTES.HOME} />;
    }
 
-   authContext.logout();
-   return <Navigate to={ROUTES.LOGIN} replace />
+   return(<Outlet />);
 }
 
 export default PrivateRoute;
