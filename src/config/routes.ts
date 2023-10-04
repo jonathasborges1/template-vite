@@ -5,4 +5,4 @@ const ROUTES = {
    TYPOGRAPHY: "/typography",
 }
 
-export default ROUTES;
+export { ROUTES } ;

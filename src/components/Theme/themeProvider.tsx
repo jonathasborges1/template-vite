@@ -14,4 +14,4 @@ interface Props {
     ) 
   };
   
- export default ThemeProvider;
+ export { ThemeProvider };

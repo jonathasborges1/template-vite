@@ -2,11 +2,11 @@ import React from "react";
 import { Navigate, PathRouteProps } from "react-router-dom";
 
 import { useAuth } from "@hooks/AuthContext";
-import ROUTES from "@config/routes";
+import { ROUTES } from "@config/routes";
 
 interface PrivateRouteProps extends PathRouteProps {}
 
- const PrivateRoute: React.FC<PrivateRouteProps> = ({ Component, ...props }) => {
+ const PrivateRoute: React.FC<PrivateRouteProps> = ({ Component }) => {
    const authContext = useAuth();
 
    if (authContext.token && Component) {

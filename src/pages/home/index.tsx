@@ -2,7 +2,6 @@ import React from 'react';
 import { useSnackbar } from 'notistack';
 import { Grid, Typography } from '@mui/material';
 
-
 const Home: React.FC = () => {
   const { enqueueSnackbar } = useSnackbar();
 
@@ -15,11 +14,12 @@ const Home: React.FC = () => {
   }
   
   return (
-      <>
-         Home Page
+      <Grid container>
+        <Typography variant='h1'>Home Page</Typography>
+         
          <button onClick={handleClick}>Show Snackbar</button>
          <br />
-      </>
+      </Grid>
   );
 };
 

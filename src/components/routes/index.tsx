@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { ROUTES } from '@config/routes';
+import PrivateRoute from '@components/Routes/PrivateRoute';
+
+import TypographyPage from '@pages/Typography';
+import Login from '@pages/Login';
 import Home from '@pages/Home';
 import About from '@pages/About';
-import ROUTES from '@config/routes';
-import PrivateRoute from '@components/Routes/PrivateRoute';
-import Login from '@pages/Login';
-import TypographyPage from '@pages/Typography';
 
 const RouterProvider: React.FC = () => {
   return (
@@ -24,4 +25,4 @@ const RouterProvider: React.FC = () => {
   );
 };
 
-export default RouterProvider;
+export {  RouterProvider };
